@@ -1,1 +1,0 @@
-check out the blog post here - [http://www.realpython.com/blog/python/rethink-flask-a-simple-todo-list-powered-by-flask-and-rethinkdb/](http://www.realpython.com/blog/python/rethink-flask-a-simple-todo-list-powered-by-flask-and-rethinkdb/#.UqyteWRDtTc)
