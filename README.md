@@ -27,6 +27,8 @@ Usage
 Visit http://localhost:5000 in your web browser to access the to-do list application.
 You can add new tasks by entering a task description and clicking "Save."
 Existing tasks are displayed on the main page.
+![image](https://github.com/codeabuu/FlaskTodoDB/assets/125456974/9fd21067-e810-4ccf-b61e-9bc244e57e5f)
+
 
 **Authors**
 Abdullahi Ngui
