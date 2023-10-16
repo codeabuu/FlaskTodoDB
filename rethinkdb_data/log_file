@@ -1,8 +1,74 @@
-2023-10-15T19:57:45.020984202 0.016295s notice: Recursively removing directory /home/aladin/FlaskTodoDB/rethinkdb_data/tmp
-2023-10-15T19:57:45.032823410 0.028133s notice: Initializing directory /home/aladin/FlaskTodoDB/rethinkdb_data
-2023-10-15T19:57:45.032917510 0.028227s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/aladin/FlaskTodoDB/rethinkdb_data' did not already exist or is empty.)
-2023-10-15T19:57:45.032933610 0.028243s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
-2023-10-15T19:57:45.037320413 0.032631s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
-2023-10-15T19:57:45.037373813 0.032683s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
-2023-10-15T19:57:45.077732940 0.073042s info: Automatically using cache size of 2891 MB
-2023-10-15T19:57:45.079295941 0.074605s error: TCP socket creation failed for port 29015: Address already in use.
+2023-10-16T18:55:36.810939420 0.058554s notice: Recursively removing directory /home/aladin/FlaskTodoDB/rethinkdb_data/tmp
+2023-10-16T18:55:36.832416419 0.080031s notice: Initializing directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-16T18:55:36.833171819 0.080786s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/aladin/FlaskTodoDB/rethinkdb_data' did not already exist or is empty.)
+2023-10-16T18:55:36.833213519 0.080828s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
+2023-10-16T18:55:36.835426519 0.083041s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
+2023-10-16T18:55:36.835490919 0.083105s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-16T18:55:36.914820119 0.162434s info: Automatically using cache size of 3073 MB
+2023-10-16T18:55:36.921763419 0.169377s notice: Listening for intracluster connections on port 29015
+2023-10-16T18:55:36.931440818 0.179055s notice: Listening for client driver connections on port 28015
+2023-10-16T18:55:36.931536318 0.179150s notice: Listening for administrative HTTP connections on port 8080
+2023-10-16T18:55:36.931539218 0.179153s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2023-10-16T18:55:36.931541118 0.179155s notice: Listening on driver addresses: 127.0.0.1, ::1
+2023-10-16T18:55:36.931545918 0.179160s notice: Listening on http addresses: 127.0.0.1, ::1
+2023-10-16T18:55:36.931550218 0.179164s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2023-10-16T18:55:36.931553518 0.179167s notice: Server ready, "BEASTLY_xib" f1a9261d-9048-49fc-96f2-8c5f846ee242
+2023-10-16T18:55:43.084685564 6.332300s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2023-10-16T18:55:43.085137464 6.332752s notice: Shutting down client connections...
+2023-10-16T18:55:43.085229164 6.332843s notice: All client connections closed.
+2023-10-16T18:55:43.085232064 6.332846s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2023-10-16T18:55:43.091393964 6.339008s notice: Storage engine shut down.
+2023-10-16T18:56:02.904119653 0.026172s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
+2023-10-16T18:56:02.906270553 0.028323s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
+2023-10-16T18:56:02.906339753 0.028392s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-16T18:56:02.938411452 0.060463s info: Automatically using cache size of 3090 MB
+2023-10-16T18:56:02.940849552 0.062901s notice: Listening for intracluster connections on port 29015
+2023-10-16T18:56:02.944252952 0.066305s notice: Listening for client driver connections on port 28015
+2023-10-16T18:56:02.944342552 0.066394s notice: Listening for administrative HTTP connections on port 8080
+2023-10-16T18:56:02.944345352 0.066397s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2023-10-16T18:56:02.944347152 0.066399s notice: Listening on driver addresses: 127.0.0.1, ::1
+2023-10-16T18:56:02.944354252 0.066406s notice: Listening on http addresses: 127.0.0.1, ::1
+2023-10-16T18:56:02.944360352 0.066412s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2023-10-16T18:56:02.944363952 0.066415s notice: Server ready, "BEASTLY_xib" f1a9261d-9048-49fc-96f2-8c5f846ee242
+2023-10-16T18:56:59.846868839 56.968922s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2023-10-16T18:56:59.847513439 56.969565s notice: Shutting down client connections...
+2023-10-16T18:56:59.847763339 56.969815s notice: All client connections closed.
+2023-10-16T18:56:59.847822239 56.969874s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2023-10-16T18:56:59.848866039 56.970919s notice: Storage engine shut down.
+2023-10-16T18:58:10.866082502 0.018907s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
+2023-10-16T18:58:10.868285402 0.021110s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
+2023-10-16T18:58:10.868355002 0.021179s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-16T18:58:10.907451102 0.060275s info: Automatically using cache size of 3089 MB
+2023-10-16T18:58:10.909685401 0.062509s notice: Listening for intracluster connections on port 29015
+2023-10-16T18:58:10.913130801 0.065955s notice: Listening for client driver connections on port 28015
+2023-10-16T18:58:10.913231101 0.066055s notice: Listening for administrative HTTP connections on port 8080
+2023-10-16T18:58:10.913234101 0.066058s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2023-10-16T18:58:10.913236201 0.066060s notice: Listening on driver addresses: 127.0.0.1, ::1
+2023-10-16T18:58:10.913240701 0.066064s notice: Listening on http addresses: 127.0.0.1, ::1
+2023-10-16T18:58:10.913244701 0.066068s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2023-10-16T18:58:10.913248301 0.066072s notice: Server ready, "BEASTLY_xib" f1a9261d-9048-49fc-96f2-8c5f846ee242
+2023-10-16T18:58:22.079285312 11.232109s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2023-10-16T18:58:22.079753512 11.232578s notice: Shutting down client connections...
+2023-10-16T18:58:22.079863112 11.232687s notice: All client connections closed.
+2023-10-16T18:58:22.079866512 11.232690s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2023-10-16T18:58:22.080956812 11.233781s notice: Storage engine shut down.
+2023-10-16T19:00:32.709253419 0.020390s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
+2023-10-16T19:00:32.711364919 0.022502s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
+2023-10-16T19:00:32.711450919 0.022588s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-16T19:00:32.746335820 0.057473s info: Automatically using cache size of 3083 MB
+2023-10-16T19:00:32.748784221 0.059921s notice: Listening for intracluster connections on port 29015
+2023-10-16T19:00:32.752440621 0.063577s notice: Listening for client driver connections on port 28015
+2023-10-16T19:00:32.752544321 0.063681s notice: Listening for administrative HTTP connections on port 8080
+2023-10-16T19:00:32.752547221 0.063684s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2023-10-16T19:00:32.752549021 0.063686s notice: Listening on driver addresses: 127.0.0.1, ::1
+2023-10-16T19:00:32.752557721 0.063694s notice: Listening on http addresses: 127.0.0.1, ::1
+2023-10-16T19:00:32.752568321 0.063705s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2023-10-16T19:00:32.752600021 0.063737s notice: Server ready, "BEASTLY_xib" f1a9261d-9048-49fc-96f2-8c5f846ee242
+2023-10-16T19:00:36.714748133 4.025885s info: Table 5b3aa32a-0520-4196-bd6b-97c46acab941: Starting a new Raft election for term 1.
+2023-10-16T19:00:36.718532833 4.029670s info: Table 5b3aa32a-0520-4196-bd6b-97c46acab941: Added replica on this server.
+2023-10-16T19:00:36.724471033 4.035608s info: Table 5b3aa32a-0520-4196-bd6b-97c46acab941: This server is Raft leader for term 1. Latest log index is 0.
+2023-10-16T19:04:07.936238204 215.247375s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2023-10-16T19:04:07.936706503 215.247843s notice: Shutting down client connections...
+2023-10-16T19:04:07.936801203 215.247938s notice: All client connections closed.
+2023-10-16T19:04:07.936804403 215.247941s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2023-10-16T19:04:07.947406598 215.258543s notice: Storage engine shut down.
