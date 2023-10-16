@@ -1,12 +1,13 @@
 from flask import render_template, url_for, redirect, g, request ##
 from app import app
-from forms import TaskForm
+from .forms import TaskForm
 import json ##
 
 # rethink imports
-import rethinkdb as r
+import rethinkdb as rdb
 from rethinkdb.errors import RqlRuntimeError, RqlDriverError
 
+r = rdb.RethinkDB()
 # rethink config
 RDB_HOST =  'localhost'
 RDB_PORT = 28015
@@ -18,9 +19,9 @@ def dbSetup():
     try:
         r.db_create(TODO_DB).run(connection)
         r.db(TODO_DB).table_create('todos').run(connection)
-        print 'Database setup completed'
+        print ('Database setup completed')
     except RqlRuntimeError:
-        print 'Database already exists.'
+        print ('Database already exists.')
     finally:
         connection.close()
 dbSetup()

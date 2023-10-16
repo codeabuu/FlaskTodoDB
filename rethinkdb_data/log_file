@@ -1,0 +1,8 @@
+2023-10-15T19:57:45.020984202 0.016295s notice: Recursively removing directory /home/aladin/FlaskTodoDB/rethinkdb_data/tmp
+2023-10-15T19:57:45.032823410 0.028133s notice: Initializing directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-15T19:57:45.032917510 0.028227s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/aladin/FlaskTodoDB/rethinkdb_data' did not already exist or is empty.)
+2023-10-15T19:57:45.032933610 0.028243s notice: Running rethinkdb 2.4.2 (GCC 11.4.0)...
+2023-10-15T19:57:45.037320413 0.032631s notice: Running on Linux 5.15.90.1-microsoft-standard-WSL2 x86_64
+2023-10-15T19:57:45.037373813 0.032683s notice: Loading data from directory /home/aladin/FlaskTodoDB/rethinkdb_data
+2023-10-15T19:57:45.077732940 0.073042s info: Automatically using cache size of 2891 MB
+2023-10-15T19:57:45.079295941 0.074605s error: TCP socket creation failed for port 29015: Address already in use.
