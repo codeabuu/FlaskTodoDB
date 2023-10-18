@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Todo List! - Build using flask and Rethinkdb</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<style>
-			.container{
-				padding-top: 50px;
-				max-width: 500px;
-			}
-		</style>
+		    <title>Todo List! - Build using Flask and Rethinkdb</title>
+		        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+			    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			        <style>
+        .container {
+		            padding-top: 50px;
+			                max-width: 500px;
+					        }
+	    </style>
 	</head>
 	<body>
-		<div class='container'>
-		{% block content %}{% endblock %}
-		</div>
-		  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+		    <nav class="navbar navbar-default">
+			            <div class="container">
+					                <ul class="nav navbar-nav">
+								                <li><a href="{{ url_for('index') }}">Home</a></li>
+										                <!-- Add this list item for the login link -->
+												                <li><a href="{{ url_for('login') }}">Login</a></li>
+														                <!-- Add this list item for the register link -->
+																                <li><a href="{{ url_for('register') }}">Register</a></li>
+																		            </ul>
+																			            </div>
+																				        </nav>
+																					    <div class="container">
+																						            {% block content %}{% endblock %}
+																							        </div>
+																								    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+																								        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	</body>
 </html>
 

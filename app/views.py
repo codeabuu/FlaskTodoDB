@@ -2,7 +2,7 @@ from flask import render_template, url_for, redirect, g, request
 from app import app
 from .forms import TaskForm, LoginForm, RegForm
 import json
-
+import bcrypt
 #now we will import our rethinkdb
 import rethinkdb as rdb
 from rethinkdb.errors import RqlRuntimeError, RqlDriverError
@@ -69,4 +69,21 @@ def login():
 
     return render_template('auth.html', form=form)
 
-def 
+def register(Form):
+    form = RegForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
+        hashed_pass = hash_password(password)
+
+        try:
+            r.table('user').insert({'username': username, 'password': hashed_pass}).run(g.rdb_conn)
+            flash("Registration Successful", 'success')
+            return redirect(url_for('login'))
+        except RqlRuntimeError:
+            flash("DBError", 'error')
+    return render_template('reg.html', form=form)
+def hash_pass(password):
+    salt = bcrypt.gensalt()
+    hashed_pass = bcrypt.hashpw(password.encode('utf-8'), salt)
+    return hashed_pass
