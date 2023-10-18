@@ -50,6 +50,8 @@ def index():
         return redirect(url_for('index'))
     selection = list(r.table('todo').run(g.rdb_conn))
     return render_template('index.html', form = form, tasks = selection)
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
@@ -58,7 +60,7 @@ def login():
 
         try:
             user = r.table('user').filter({'username': username}).coerce_to(g.rdb_conn)
-            if user and user[0]['password'] == password:
+            if user and bcrypt.checkpw(password.encode('utf-8'), user[0]['password'].encode('utf-8')):
                 session['username'] = username
                 flash('Logged in Succesfully', 'Success')
                 return redirect(url_for('index'))
@@ -69,12 +71,13 @@ def login():
 
     return render_template('auth.html', form=form)
 
+@app.route('/register', methods=['GET','POST'])
 def register(Form):
     form = RegForm()
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
-        hashed_pass = hash_password(password)
+        hashed_pass = hash_pass(password)
 
         try:
             r.table('user').insert({'username': username, 'password': hashed_pass}).run(g.rdb_conn)
@@ -83,6 +86,7 @@ def register(Form):
         except RqlRuntimeError:
             flash("DBError", 'error')
     return render_template('reg.html', form=form)
+
 def hash_pass(password):
     salt = bcrypt.gensalt()
     hashed_pass = bcrypt.hashpw(password.encode('utf-8'), salt)
