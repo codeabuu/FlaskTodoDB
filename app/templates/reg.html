@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Register</h1>
+
+<form method='POST' action='/register'>
+	{{ form.hidden_tag() }}
+	<div class="form-group">
+		{{ form.username.label(class='control-label') }}
+		{{ form.username(class="form-control") }}
+	</div>
+	<div class="form-group">
+		{{ form.password.label(class="control-label") }}
+		{{ form.password(class="form-control") }}
+	</div>
+	<div class="form-group">
+		{{ form.confirm_password.label(class="control-label") }}
+		{{ form.confirm_password(class="form-control") }}
+	</div>
+</form>
+
+{% endblock %}

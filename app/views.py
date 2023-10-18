@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, g, request
 from app import app
-from .forms import TaskForm
+from .forms import TaskForm, LoginForm, RegForm
 import json
 
 #now we will import our rethinkdb
@@ -18,6 +18,7 @@ def dbSetup():
     try:
         r.db_create(dbname).run(connection)
         r.db(dbname).table_create('todo').run(connection)
+        r.db(dbname).table_create('user').run(connection)
         print('Set up for DataBase complete')
     except RqlRuntimeError:
         print("Database alread exists.")
@@ -49,4 +50,23 @@ def index():
         return redirect(url_for('index'))
     selection = list(r.table('todo').run(g.rdb_conn))
     return render_template('index.html', form = form, tasks = selection)
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
 
+        try:
+            user = r.table('user').filter({'username': username}).coerce_to(g.rdb_conn)
+            if user and user[0]['password'] == password:
+                session['username'] = username
+                flash('Logged in Succesfully', 'Success')
+                return redirect(url_for('index'))
+            else:
+                flash('Invalid Username or password', 'error')
+        except RqlRuntimeError:
+            flash('DBError', 'error')
+
+    return render_template('auth.html', form=form)
+
+def 
